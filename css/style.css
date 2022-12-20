@@ -142,7 +142,7 @@ nav ul {
   grid-template-columns: 30% 70%;
   grid-template-areas: "left right";
   column-rule-color: var(--secondary-color);
-  column-rule-style: ridge;
+  column-rule-style: ridge\;
 }
 
 .page-section h2 {
