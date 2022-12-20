@@ -15,6 +15,7 @@
   --transition: 0.3s;
 }
 
+div {display:inline}
 
 * {
   box-sizing: border-box;
@@ -169,25 +170,24 @@ nav ul {
 }
 
 .projects-container {
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-  "challenge-1 challenge-1"
-  "mini-project-landing-page week-2-mini-project"
-  ;
+    "challenge challenge"
+    "miniprojectone miniprojecttwo" ;
 }
 
-.challenge-1{
-  grid-area: challenge-1;
+.challenge {
+  grid-area: challenge ;
 }
 
 .mini-project-landing-page {
-grid-area: mini-project-landing-page;
+grid-area: miniprojectone;
 }
 
 .week-2-mini-project {
-  grid-area:week-2-mini-project;
+  grid-area: miniprojecttwo;
 }
 
 
@@ -329,29 +329,14 @@ footer {
         width: 30rem;
     }
 
-  .bio {
-    margin-top: -7rem;
-    width: 20.5rem;
-  }
+  
 
   .page-section {
-    margin-top: 2rem;
     padding: 1rem 3.5rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 10px;
-    row-gap: 15px;  
-    align-content: space-evenly; 
-    justify-content: stretch; 
-    grid-template-areas: 
-    "about"
-     "about-me"
-    "work"
-    "challenge-1"
-    "mini-project-landing-page"
-    "week-2-mini-project"
-    "contact-me"
-    "contact-form"
+    display: flex;
+    justify-content: flex-start; 
+    border: var(--primary-color);
+    border-radius: 5cm;
   }
 
   .page-section h2 {
@@ -363,7 +348,12 @@ footer {
   }
 
   .projects-container {
-    flex-direction: column;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "challenge"
+        "miniprojectone"
+        "miniprojecttwo";
   }
 
   .project-container {
