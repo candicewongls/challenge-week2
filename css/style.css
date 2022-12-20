@@ -325,7 +325,7 @@ footer {
   }
 
   .hero-banner img {
-        height: 37.5rem;
+        height: 30rem;
         width: 30rem;
     }
 
@@ -337,6 +337,21 @@ footer {
   .page-section {
     margin-top: 2rem;
     padding: 1rem 3.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+    row-gap: 15px;  
+    align-content: space-evenly; 
+    justify-content: stretch; 
+    grid-template-areas: 
+    "about"
+     "about-me"
+    "work"
+    "challenge-1"
+    "mini-project-landing-page"
+    "week-2-mini-project"
+    "contact-me"
+    "contact-form"
   }
 
   .page-section h2 {
